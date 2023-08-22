@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leather Goods Online Shop</title>
+  <style>
+    /* Add your custom CSS styling here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #8B4513;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      padding-bottom: 60px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .product {
+      width: calc(33.33% - 20px);
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .product img {
+      max-width: 100%;
+      height: auto;
+    }
+    .product .quantity-control {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .product .quantity-control button {
+      padding: 5px 10px;
+      background-color: #8B4513;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .product .quantity-input {
+      width: 40px;
+      text-align: center;
+    }
+    footer {
+      background-color: #8B4513;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Our Leather Goods Online Shop</h1>
+    <p>Please do not take the product captions seriously.</p>
+  </header>
+  <div class="container">
+    <div class="product">
+      <h2>Laptop Messenger Bag</h2>
+      <img src="leatherbag.jpg" alt="Classic Leather Bag" width="300" height="250">
+      <p>Because every corporate slave needs one.</p>
+      <p><strong>Price: $199.99</strong></p>
+      <div class="quantity-control">
+        <button class="decrease-quantity">-</button>
+        <input class="quantity-input" type="number" value="1" min="1">
+        <button class="increase-quantity">+</button>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product">
+      <h2>Leather Wallet</h2>
+      <img src="leatherwaller.jpg" alt="Leather Wallet" width="400" height="400">
+      <p>For all your credit cards (Half of which you don't use). Comes with a coin compartment so you can't tell your friends you don't take small change</p>
+      <p><strong>Price: $49.99</strong></p>
+      <div class="quantity-control">
+        <button class="decrease-quantity">-</button>
+        <input class="quantity-input" type="number" value="1" min="1">
+        <button class="increase-quantity">+</button>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product">
+      <h2>Leather Belt</h2>
+      <img src="leatherbelt.jpg" alt="Leather Belt">
+      <p>For your pants ONLY.</p>
+      <p><strong>Price: $39.99</strong></p>
+      <div class="quantity-control">
+        <button class="decrease-quantity">-</button>
+        <input class="quantity-input" type="number" value="1" min="1">
+        <button class="increase-quantity">+</button>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product">
+      <h2>Leather Phone Case</h2>
+      <img src="leatherphonecase.jpg" alt="Leather Phone Case">
+      <p>If you got everything else on this site you might as well get this too.</p>
+      <p><strong>Price: $29.99</strong></p>
+      <div class="quantity-control">
+        <button class="decrease-quantity">-</button>
+        <input class="quantity-input" type="number" value="1" min="1">
+        <button class="increase-quantity">+</button>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product">
+      <h2>Leather Journal</h2>
+      <img src="leatherjournal.jpg" alt="Leather Journal">
+      <p>I don't really see a reason for this just get a normal notebook.</p>
+      <p><strong>Price: $34.99</strong></p>
+      <div class="quantity-control">
+        <button class="decrease-quantity">-</button>
+        <input class="quantity-input" type="number" value="1" min="1">
+        <button class="increase-quantity">+</button>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product">
+      <h2>Leather Duffel</h2>
+      <img src="leatherduffel.jpg" alt="Leather Duffel" width="300" height="250">
+      <p>Can fit half a body. Just saying.</p>
+      <p><strong>Price: $299.99</strong></p>
+      <div class="quantity-control">
+        <button class="decrease-quantity">-</button>
+        <input class="quantity-input" type="number" value="1" min="1">
+        <button class="increase-quantity">+</button>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2023 Leather Goods Online Shop. All rights reserved.</p>
+  </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const quantityControls = document.querySelectorAll(".quantity-control");
+
+    quantityControls.forEach(function (control) {
+      const decreaseButton = control.querySelector(".decrease-quantity");
+      const increaseButton = control.querySelector(".increase-quantity");
+      const quantityInput = control.querySelector(".quantity-input");
+
+      decreaseButton.addEventListener("click", function () {
+        if (quantityInput.value > 1) {
+          quantityInput.value = parseInt(quantityInput.value) - 1;
+        }
+      });
+
+      increaseButton.addEventListener("click", function () {
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
