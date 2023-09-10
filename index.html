@@ -1,10 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Resume</title>
+    <style>
+      .square-image {
+    object-fit: cover; /* Ensures the image covers the entire square container */
+    object-position: center center; /* Centers the image within the container */
+    border-radius: 50%; /* Creates a circular shape */
+       }
+
+       .mb-3 {
+        margin-bottom: 40px; /* Adjust the value to increase or decrease spacing */
+    }
+
+    </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -13,18 +24,19 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Your Name</a>
+<div class="d-flex flex-column min-vh-10 justify-content-center text-center">
+<nav class="navbar navbar-expand-lg navbar-dark bg-info mt-auto mb-4">
+  <a class="navbar-brand" href="#">Liew Wai Horng</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav mx-auto">
             <li class="nav-item">
                 <a class="nav-link" href="#about">About Me</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#employment">Employment</a>
+                <a class="nav-link" href="#employment">Employment History</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#education">Education</a>
@@ -35,18 +47,19 @@
         </ul>
     </div>
 </nav>
+</div>
 
 <!-- About Me Section -->
 <section id="about" class="container mt-5">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 text-center">
             <h2>About Me</h2>
-            <img src="your_photo.jpg" alt="Your Photo" class="img-fluid rounded-circle mb-3">
-            <p>Your biography goes here...</p>
+            <img src="" alt="Your Photo" width="200" height="200" class="img-fluid rounded-circle mb-3 square-image">
+            <p>Hi! My name is Wai Horng and I am a Business Diploma graduate with internship experience in both corporate and start-up environments. I co-founded a start-up known as Alter-Eco from Sep 2018 - May 2019 for a Final Year Project. For my National Service, I was a Public Transport Security Command (Transcom) Officer at SPF. Currently, I am a year 2 student at Singapore Management University majoring in Information Systems. </p>
         </div>
         <div class="col-md-6">
-            <h2>Favorite Travel Destination</h2>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+            <h2>Favorite Travel Destination: Japan</h2>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/IuTDuvYr7f0?autoplay=1&mute=1&loop=1" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 </section>
@@ -54,7 +67,49 @@
 <!-- Employment Section (You can use a carousel for this) -->
 <section id="employment" class="container mt-5">
     <h2>Employment History</h2>
-    <!-- Add a carousel here with images and text -->
+    <ul>
+
+      <p>
+        <li>Dec 2021 to Mar 2022: Operations Executive at Coliwoo Dormitory </li>Worked at a Community Recovery Facility that oversees the recovery of Covid-19 positive migrant workers.<br/> Roles and Responsibilities: 
+        <ul>
+          <li>Maintenance of the facility to ensure the smooth recovery of patients.</li>
+          <li>Handling complaints and attending to the needs of patients.</li>
+          <li>Carrying out regular inspections of properties and perform preventive measures to keep the property functioning in top condition.</li>
+          <li>Ensure compliance of safety & building regulations and all other statutory requirements.</li>
+        </ul>
+      </p>
+
+      <p>
+        <li>Jan 2020 to Nov 2021: National Service at Singapore Police Force </li>I was posted to a frontline vocation under the Public Transport Security Command (Transcom). As a Transcom foot patrol officer, my responsibilities include:
+        <ul>
+          <li>Patrolling the public transport network to ensure its safety and security</li>
+          <li>Frequent interaction with the public to share measures on how to stay safe on the network</li>
+          <li>Responding to incidents and ensure its de-escalation</li>
+          <li>Conflict management</li>
+          <li>Information gathering during incidents by conducting interviews with involved members of public</li>
+        </ul>
+      At the end of my service, I received Silver for the Outstanding PNSF Award for my contributions on the frontline.
+     </p>
+
+     <p>
+      <li>Mar 2019 to Dec 2019: Digital Transformation Intern at DBS Bank </li>Attached to the Digital Transformation & Data (DTD) Team at the Institutional Banking Group Operations (IBGO) department. My roles and responsibilities were:
+      <ul>
+        <li>Taking minutes of meetings</li>
+        <li>Preparation of PowerPoint decks for senior management reporting Creating Excel sheets for data presentation</li>
+        <li>Responding to incidents and ensure its de-escalation</li>
+        <li>Designing newsletters</li>
+        <li>Managed data in an Excel repository that overlooked the department's work processes</li>
+      </ul>
+      I also extended my internship from Aug 2019 to Dec 2019 and was transferred to the Chatbot department to carry out website testing.
+    </p>
+
+      <li>Mar 2018 to May 2018: Start-up Intern at PichaEats</li>Interned for 2 months at The PichaEats, a Malaysia social enterprise based in Kuala Lumpur. 
+      Roles during internship:
+      <ul>
+        <li>Marketing: Conducted cold calls to source for potential customers, craft and send follow up emails to existing customers; and arranging meetings with new business partners.</li>
+        <li>Human Resource: Posting job advertisements on websites to recruit part timers, arranging and conducting job interviews.</li>
+        <li>Operations: Assist with the setting up and dismantling of events, networking with potential customers.</li>
+    </ul>
 </section>
 
 <!-- Education Section (You can use a carousel for this) -->
